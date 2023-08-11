@@ -60,7 +60,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <div className={`${storeTheme === 'light' ? 'bg-alabaster' : 'bg-ebonyclaylight'} flex flex-col w-full min-h-screen p-0 m-0 border-box font-nunito gap-y-[13rem]`}>
+      <div className={`${storeTheme === 'light' ? 'bg-alabaster' : 'bg-ebonyclaylight'} flex flex-col children:border-2 min-h-screen p-0 m-0 border-box font-nunito gap-y-[13rem]`}>
           <Header theme={storeTheme} setStoreTheme={setStoreTheme}/>
           <Routes>
             <Route 
