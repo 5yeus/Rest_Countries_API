@@ -28,7 +28,7 @@ const Countries: React.FC<CountriesProps> = ({ theme, data, searchValue, regionF
     const filteredCountries = filterCountries(data);
 
     return (
-        <div className='h-full   laptop:mx-[4rem] mobile:mx-auto  grid laptop:grid-cols-4 mobile:grid-cols-1 gap-y-12 laptop:gap-x-[6rem] cursor-pointer pb-4'>
+        <div className='h-full   laptop:mx-[4rem] mobile:mx-[2.4rem]  grid laptop:grid-cols-4 mobile:grid-cols-1 gap-y-12 laptop:gap-x-[6rem] cursor-pointer pb-4'>
             {filteredCountries.map((country)=> (
                 <Link to={`/country/${country.alpha3Code}`}
                       key={country.alpha3Code}  className={`w-full h-[25rem] rounded-[0.3125rem] shadow-lg ${theme === 'light' ? 'text-woodsmoke bg-white shadow-slate-200/50' : 'text-white bg-ebonyclaydark shadow-custom'} pb-4 grid grid-rows-[55%_40%] gap-y-6`}>
