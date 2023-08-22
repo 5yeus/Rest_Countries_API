@@ -7,7 +7,7 @@ import { useDispatch,useSelector } from 'react-redux'
 import './index.css'
 import Countries from './Components/Countries.tsx'
 import CountryPreviewer from './Components/CountryPreviewer.tsx'
-import { CountryData,AppState } from './Interface.ts'
+import type { CountryData,AppState } from './Interface.ts'
 import Loading from './assets/undraw_loading_re_5axr (3).svg'
 
 
@@ -17,7 +17,7 @@ const App: React.FC = () => {
   const [data, setData ] = useState<CountryData[] | null>(null)
   const [searchValue, setSearchValue] = useState<string>('')
   const [regionFilter, setRegionFilter] = useState<string>('all')
-  const [ loading, setLoading] = useState<boolean>(true)
+  const [ loading, setLoading ] = useState<boolean>(true)
   const dispatch = useDispatch();
 
 

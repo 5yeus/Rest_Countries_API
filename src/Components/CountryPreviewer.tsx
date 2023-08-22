@@ -31,7 +31,7 @@ const Previewer: React.FC<PreviewerProps> = ({ data, theme})=> {
     
     return(
         <>
-            <div className={`${theme === 'light' ? 'text-woodsmoke' : 'text-white'} laptop:mx-[4rem] mobile:mx-[1.5rem] flex flex-col gap-y-[11rem] mt-6`}>
+            <div className={`${theme === 'light' ? 'text-woodsmoke' : 'text-white'} laptop:mx-[4rem] mobile:mx-[1rem] flex flex-col gap-y-[11rem] mt-6`}>
                 <Link to={'/'} >
                     <div className={`w-[8.5rem] h-[2.5rem] flex flex-row items-center justify-center gap-3 shadow-lg ${theme === 'light' ? 'bg-white shadow-slate-200/50' : 'bg-ebonyclaydark shadow-custom'} rounded-[0.375rem] relative top-[7rem]`}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-6 h-6 ${theme === 'light' ? 'stroke-woodsmoke' : 'stroke-white'}`}>
@@ -41,8 +41,8 @@ const Previewer: React.FC<PreviewerProps> = ({ data, theme})=> {
                     </div>
                 </Link>
                 <section className='flex laptop:flex-row items-center laptop:gap-[8rem] mobile:flex-col mobile:gap-y-[3rem]'>
-                    <img className='w-[48rem] h-[33rem] object-cover' src={country.flag}/>
-                    <div className='flex flex-col self-center px-2 laptop:gap-y-6 mobile:gap-y-8'>
+                    <img className='laptop:w-[48rem] laptop:h-[33rem] laptop:object-cover mobile:h-[17rem]' src={country.flag}/>
+                    <div className='flex flex-col self-center px-2 laptop:gap-y-6 mobile:gap-y-8 pb-4'>
                         <h1 className='font-bold text-[2rem]'>{country.name}</h1>
                         <div className='flex laptop:flex-row laptop:gap-[14rem]  mobile:flex-col mobile:gap-y-6'>
                             <div className='flex flex-col gap-2'>
@@ -68,9 +68,9 @@ const Previewer: React.FC<PreviewerProps> = ({ data, theme})=> {
                                     }`}
                                     onClick={() => navigate(`/country/${borderCodes()[index]}`)}
                                     >
-                                        {borderName } 
+                                        {borderName} 
                                     </div>
-                                )) } 
+                                )) }
                                  {/* <p>not available</p> */}
                             </div>
                         </div>
